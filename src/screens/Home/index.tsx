@@ -28,8 +28,8 @@ type LoginListDataProps = LoginDataProps[];
 
 export function Home() {
   const [searchText, setSearchText] = useState("");
-  const [searchListData, setSearchListData] = useState<LoginListDataProps>([]);
-  const [data, setData] = useState<LoginListDataProps>([]);
+  const [searchListData, setSearchListData] = useState<LoginListDataProps>(['']);
+  const [data, setData] = useState<LoginListDataProps>(['']);
 
   async function loadData() {
     const dataKey = "@savepass:logins";
@@ -45,6 +45,8 @@ export function Home() {
   function handleFilterLoginData() {
     const filteredData = searchListData.filter((data) => {
       const isValid = data.service_name.toLocaleLowerCase().includes(searchText.toLowerCase());
+      
+      
       if(isValid) {
         return data;
       }
@@ -91,9 +93,9 @@ export function Home() {
         <Metadata>
           <Title>Suas senhas</Title>
           <TotalPassCount>
-            {searchListData.length
+            {/* {searchListData.length
               ? `${`${searchListData.length}`.padStart(2, "0")} ao total`
-              : "Nada a ser exibido"}
+              : "Nada a ser exibido"} */}
           </TotalPassCount>
         </Metadata>
 
