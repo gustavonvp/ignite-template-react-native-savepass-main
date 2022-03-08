@@ -93,9 +93,9 @@ export function Home() {
         <Metadata>
           <Title>Suas senhas</Title>
           <TotalPassCount>
-            {/* {searchListData.length
+            {searchListData.length
               ? `${`${searchListData.length}`.padStart(2, "0")} ao total`
-              : "Nada a ser exibido"} */}
+              : "Nada a ser exibido"}
           </TotalPassCount>
         </Metadata>
 
